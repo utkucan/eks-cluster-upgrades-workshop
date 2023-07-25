@@ -67,7 +67,7 @@ spec:
         create: true
         name: "argo-workflow"
         annotations:
-          eks.amazonaws.com/role-arn: arn:aws:eks:078748202917:WSParticipantRole/Participant # Add IRSA for EKS add-on validate
+          eks.amazonaws.com/role-arn: arn:aws:iam::078748202917:role/argo-workflows-irsa # Add IRSA for EKS add-on validate
       rbac:
         create: true
     controller:
@@ -77,7 +77,7 @@ spec:
       serviceType: LoadBalancer
       serviceAccount:
         annotations: 
-          eks.amazonaws.com/role-arn: 
+          eks.amazonaws.com/role-arn: arn:aws:iam::078748202917:role/argo-workflows-irsa
       extraArgs:
       - --auth-mode=server # This is for demonstration purposes only
   install: {}
