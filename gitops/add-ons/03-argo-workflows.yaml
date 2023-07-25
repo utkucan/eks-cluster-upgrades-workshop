@@ -67,7 +67,7 @@ spec:
         create: true
         name: "argo-workflow"
         annotations:
-          eks.amazonaws.com/role-arn:  # Add IRSA for EKS add-on validate
+          eks.amazonaws.com/role-arn: arn:aws:eks:078748202917:WSParticipantRole/Participant # Add IRSA for EKS add-on validate
       rbac:
         create: true
     controller:
